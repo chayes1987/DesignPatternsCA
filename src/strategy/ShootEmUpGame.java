@@ -1,5 +1,9 @@
 package strategy;
 
+import factory.Tank;
+import factory.Vehicle;
+import javax.swing.*;
+
 public class ShootEmUpGame {
     public static void main(String[] args) {
         Character mainCharacter = new MainCharacter();
@@ -24,5 +28,9 @@ public class ShootEmUpGame {
         System.out.println("Civilian 1 becomes Vigilante!");
         civilian1.setShootBehaviour(new ShootWithAK47());
         System.out.println("Civilian1 " + civilian1.getShootBehaviour());
+
+        Vehicle tank = new Tank();
+        System.out.println("Main character " + tank.drive());
+        System.out.println("Main character " + tank.shoot());
     }
 }
