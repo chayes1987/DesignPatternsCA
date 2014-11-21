@@ -1,13 +1,13 @@
-package strategy;
-
 import factory.Vehicle;
 import factory.VehicleFactory;
+import strategy.*;
+import strategy.Character;
 
 import javax.swing.*;
 
 public class ShootEmUpGame {
     public static void main(String[] args) {
-        Character mainCharacter = new MainCharacter();
+        strategy.Character mainCharacter = new MainCharacter();
         System.out.println("Main character is " + mainCharacter.walk());
 
         Character enemy1 = new Enemy();
