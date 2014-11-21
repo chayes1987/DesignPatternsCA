@@ -10,5 +10,8 @@ public class ShootEmUpGame {
 
         System.out.println("Main character " + mainCharacter.throwGrenade());
 
+        Character civilian1 = new Civilian();
+        System.out.println("Civilian 1 is " + civilian1.run());
+        System.out.println("Civilian 1 " + civilian1.shoot());
     }
 }
