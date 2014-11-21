@@ -8,5 +8,7 @@ public class ShootEmUpGame {
         Character enemy1 = new Enemy();
         System.out.println("Enemy1 is " + enemy1.walk());
 
+        System.out.println("Main character " + mainCharacter.throwGrenade());
+
     }
 }

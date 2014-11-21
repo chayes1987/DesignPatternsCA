@@ -16,4 +16,6 @@ public abstract class Character {
 
     public abstract String shoot();
 
+    public String throwGrenade() { return "threw a grenade..."; }
+
 }
