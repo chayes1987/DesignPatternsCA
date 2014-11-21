@@ -1,5 +1,6 @@
 package strategy;
 
+import factory.ArmouredCar;
 import factory.Tank;
 import factory.Vehicle;
 import javax.swing.*;
@@ -29,8 +30,16 @@ public class ShootEmUpGame {
         civilian1.setShootBehaviour(new ShootWithAK47());
         System.out.println("Civilian1 " + civilian1.getShootBehaviour());
 
-        Vehicle tank = new Tank();
-        System.out.println("Main character " + tank.drive());
-        System.out.println("Main character " + tank.shoot());
+        Vehicle vehicle = null;
+        String type = JOptionPane.showInputDialog("Enter Vehicle type (T for Tank or A for Armoured Car)");
+
+        if (type.toLowerCase().equals("t")){
+            vehicle = new Tank();
+        }else if (type.toLowerCase().equals("a")){
+            vehicle = new ArmouredCar();
+        }
+
+        System.out.println("Main character " + vehicle.drive());
+        System.out.println("Main character " + vehicle.shoot());
     }
 }
