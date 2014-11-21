@@ -2,9 +2,8 @@ package strategy;
 
 public class Enemy extends Character{
 
-
-    @Override
-    public String shoot() {
-        return "Shooting with UZIs";
+    public Enemy(){
+        shootBehaviour = new ShootingWithUzi();
+        grenadeBehaviour = new CanThrowGrenade();
     }
 }

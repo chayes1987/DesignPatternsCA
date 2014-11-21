@@ -1,6 +1,8 @@
 package strategy;
 
 public abstract class Character {
+    IShootBehaviour shootBehaviour;
+    IGrenadeBehaviour grenadeBehaviour;
 
     public String walk(){
         return "walking...";
@@ -14,8 +16,21 @@ public abstract class Character {
         return "jumping...";
     }
 
-    public abstract String shoot();
+    public String getGrenadeBehaviour(){
+        return grenadeBehaviour.throwGrenade();
+    }
 
-    public String throwGrenade() { return "threw a grenade..."; }
+    public void setGrenadeBehaviour(IGrenadeBehaviour grenadeBehaviour){
+        this.grenadeBehaviour = grenadeBehaviour;
+    }
+
+    public String getShootBehaviour(){
+        return shootBehaviour.shoot();
+    }
+
+    public void setShootBehaviour(IShootBehaviour shootBehaviour){
+        this.shootBehaviour = shootBehaviour;
+    }
+
 
 }
