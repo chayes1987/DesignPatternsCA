@@ -1,3 +1,5 @@
+import decorator.Gun;
+import decorator.ModifiedGun;
 import factory.EnemyVehicleFactory;
 import factory.MainCharacterVehicleFactory;
 import factory.Vehicle;
@@ -9,6 +11,7 @@ import javax.swing.*;
 
 public class ShootEmUpGame {
     public static void main(String[] args) {
+        // Strategy
         Character mainCharacter = new MainCharacter();
         print("Main character is " + mainCharacter.walk());
 
@@ -32,6 +35,7 @@ public class ShootEmUpGame {
         civilian1.setShootBehaviour(new ShootWithAK47());
         print("Civilian1 " + civilian1.getShootBehaviour());
 
+        // Factory Method
         VehicleFactory enemyVehicleFactory = new EnemyVehicleFactory();
         String type = JOptionPane.showInputDialog("Enter Enemy Vehicle type (T for Tank or A for Armoured Car)");
         Vehicle vehicle = enemyVehicleFactory.createVehicle(type);
@@ -43,6 +47,13 @@ public class ShootEmUpGame {
         vehicle = mainCharacterVehicleFactory.createVehicle(type);
         print("Main Character " + vehicle.drive());
         print("Main Character " + vehicle.shoot());
+
+        // Decorator
+        Gun grenadeLauncher = new ModifiedGun();
+        System.out.println("Main character has found a gun...");
+        System.out.println("Main character has Grenade Launcher mod");
+        grenadeLauncher.setDescription("Gun with Grenade Launcher");
+        System.out.println("Main character is using a " + grenadeLauncher.getDescription());
     }
 
     public static void print(String output){
