@@ -34,6 +34,17 @@ public class ShootEmUpGame {
         civilian1.setShootBehaviour(new ShootWithAK47());
         print("Civilian1 " + civilian1.getShootBehaviour());
 
+        // State
+        int state = mainCharacter.getCurrentState();
+        if (state == 0)
+            print("Main character current health is full health!");
+
+        print("Main character has been shot...");
+        mainCharacter.setCurrentState(1);
+        state = mainCharacter.getCurrentState();
+        if (state == 1)
+            print("Main character current health is low health!");
+
         // Factory Method
         VehicleFactory enemyVehicleFactory = new EnemyVehicleFactory();
         String type = JOptionPane.showInputDialog("Enter Enemy Vehicle type (T for Tank or A for Armoured Car)");
