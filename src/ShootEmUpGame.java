@@ -5,6 +5,7 @@ import factory.Vehicle;
 import factory.VehicleFactory;
 import strategy.*;
 import strategy.Character;
+import strategy.Character.*;
 
 import javax.swing.*;
 
@@ -35,14 +36,14 @@ public class ShootEmUpGame {
         print("Civilian1 " + civilian1.getShootBehaviour());
 
         // State
-        int state = mainCharacter.getCurrentState();
-        if (state == 0)
+        HEALTH_STATE state = mainCharacter.getCurrentState();
+        if (state == HEALTH_STATE.FULL_HEALTH)
             print("Main character current health is full health!");
 
         print("Main character has been shot...");
-        mainCharacter.setCurrentState(1);
+        mainCharacter.setCurrentState(HEALTH_STATE.LOW_HEALTH);
         state = mainCharacter.getCurrentState();
-        if (state == 1)
+        if (state == HEALTH_STATE.LOW_HEALTH)
             print("Main character current health is low health!");
 
         // Factory Method
