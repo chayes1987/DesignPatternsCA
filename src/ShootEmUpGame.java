@@ -40,13 +40,10 @@ public class ShootEmUpGame {
         print("Main character current health is " + mainCharacter.getCurrentState());
 
         print("Main character has been shot...");
-        mainCharacter.setCurrentState(HEALTH_STATE.LOW_HEALTH);
-        state = mainCharacter.getCurrentState();
-        print("Main character current health is " + mainCharacter.getCurrentState());
+        mainCharacter.gotShot("Main character");
 
         print("Main Character found a first aid kit..");
-        mainCharacter.setCurrentState(HEALTH_STATE.FULL_HEALTH);
-        print("Main character current health is " + mainCharacter.getCurrentState());
+        mainCharacter.collectedFirstAidKit("Main character");
 
         // Factory Method
         VehicleFactory enemyVehicleFactory = new EnemyVehicleFactory();

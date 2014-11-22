@@ -51,4 +51,30 @@ public abstract class Character {
     }
 
     public HEALTH_STATE getCurrentState(){ return currentState; }
+
+    public void gotShot(String character){
+        if (currentState == HEALTH_STATE.FULL_HEALTH){
+            this.currentState = HEALTH_STATE.LOW_HEALTH;
+            System.out.println(character + " health is now " + this.currentState);
+        }else if(currentState == HEALTH_STATE.LOW_HEALTH){
+            this.currentState = HEALTH_STATE.NEARLY_DEAD;
+            System.out.println(character + " health is now " + this.currentState);
+        }else if(currentState == HEALTH_STATE.NEARLY_DEAD) {
+            this.currentState = HEALTH_STATE.DEAD;
+            System.out.println(character + " is now " + this.currentState);
+        }
+    }
+
+    public void collectedFirstAidKit(String character){
+        if (currentState == HEALTH_STATE.NEARLY_DEAD){
+            this.currentState = HEALTH_STATE.LOW_HEALTH;
+            System.out.println(character + " health is now " + this.currentState);
+        }else if(currentState == HEALTH_STATE.LOW_HEALTH){
+            this.currentState = HEALTH_STATE.FULL_HEALTH;
+            System.out.println(character + " health is now " + this.currentState);
+        }else if(currentState == HEALTH_STATE.FULL_HEALTH){
+            this.currentState = HEALTH_STATE.FULL_HEALTH;
+            System.out.println(character + " health is already " + this.currentState);
+        }
+    }
 }
