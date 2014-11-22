@@ -1,5 +1,4 @@
-import decorator.Gun;
-import decorator.ModifiedGun;
+import decorator.*;
 import factory.EnemyVehicleFactory;
 import factory.MainCharacterVehicleFactory;
 import factory.Vehicle;
@@ -49,11 +48,14 @@ public class ShootEmUpGame {
         print("Main Character " + vehicle.shoot());
 
         // Decorator
-        Gun grenadeLauncher = new ModifiedGun();
-        System.out.println("Main character has found a gun...");
-        System.out.println("Main character has Grenade Launcher mod");
-        grenadeLauncher.setDescription("Gun with Grenade Launcher");
-        System.out.println("Main character is using a " + grenadeLauncher.getDescription());
+        Gun gun = new SimpleGun();
+        print("Main character found a " + gun.getDescription());
+        print("Main character found a scope...");
+        gun = new Scope(gun);
+        print("Main character now has a " + gun.getDescription());
+        print("Main character found a bayonet and a flamethrower and a grenade launcher...");
+        gun = new GrenadeLauncher(new Flamethrower(new Bayonet(gun)));
+        print("Main character now has a " + gun.getDescription());
     }
 
     public static void print(String output){
