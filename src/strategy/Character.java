@@ -1,21 +1,22 @@
 package strategy;
 
+import state.*;
+
 public abstract class Character {
     IShootBehaviour shootBehaviour;
     IGrenadeBehaviour grenadeBehaviour;
 
-    public enum HEALTH_STATE {
-        FULL_HEALTH(0), LOW_HEALTH(1), NEARLY_DEAD(2), DEAD(3);
-        private int state;
-        HEALTH_STATE(int state){
-            this.state = state;
-        }
-    }
-
-    HEALTH_STATE currentState;
+    CharacterHealthState hasArmour, fullHealth,
+            lowHealth, nearlyDead, dead, currentState;
 
     public Character(){
-        setCurrentState(HEALTH_STATE.FULL_HEALTH);
+        hasArmour = new HasArmour(this);
+        fullHealth = new FullHealth(this);
+        lowHealth = new LowHealth(this);
+        nearlyDead = new NearlyDead(this);
+        dead = new Dead(this);
+
+        currentState = fullHealth;
     }
 
     public String walk(){
@@ -46,35 +47,25 @@ public abstract class Character {
         this.shootBehaviour = shootBehaviour;
     }
 
-    public void setCurrentState(HEALTH_STATE state){
+    public void setCurrentState(CharacterHealthState state){
         this.currentState = state;
     }
 
-    public HEALTH_STATE getCurrentState(){ return currentState; }
-
     public void gotShot(String character){
-        if (currentState == HEALTH_STATE.FULL_HEALTH){
-            this.currentState = HEALTH_STATE.LOW_HEALTH;
-            System.out.println(character + " health is now " + this.currentState);
-        }else if(currentState == HEALTH_STATE.LOW_HEALTH){
-            this.currentState = HEALTH_STATE.NEARLY_DEAD;
-            System.out.println(character + " health is now " + this.currentState);
-        }else if(currentState == HEALTH_STATE.NEARLY_DEAD) {
-            this.currentState = HEALTH_STATE.DEAD;
-            System.out.println(character + " is now " + this.currentState);
-        }
+        currentState.gotShot(character);
     }
 
     public void collectedFirstAidKit(String character){
-        if (currentState == HEALTH_STATE.NEARLY_DEAD){
-            this.currentState = HEALTH_STATE.LOW_HEALTH;
-            System.out.println(character + " health is now " + this.currentState);
-        }else if(currentState == HEALTH_STATE.LOW_HEALTH){
-            this.currentState = HEALTH_STATE.FULL_HEALTH;
-            System.out.println(character + " health is now " + this.currentState);
-        }else if(currentState == HEALTH_STATE.FULL_HEALTH){
-            this.currentState = HEALTH_STATE.FULL_HEALTH;
-            System.out.println(character + " health is already " + this.currentState);
-        }
+        currentState.collectedFirstAidKit(character);
     }
+
+    public void foundArmour(String character){
+        currentState.foundArmour(character);
+    }
+
+    public CharacterHealthState getHasArmourState() { return hasArmour; }
+    public CharacterHealthState getFullHealthState() { return fullHealth; }
+    public CharacterHealthState getLowHealthState() { return lowHealth; }
+    public CharacterHealthState getNearlyDeadState() { return nearlyDead; }
+    public CharacterHealthState getDeadState() { return dead; }
 }

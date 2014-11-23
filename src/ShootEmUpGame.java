@@ -3,6 +3,7 @@ import factory.EnemyVehicleFactory;
 import factory.MainCharacterVehicleFactory;
 import factory.Vehicle;
 import factory.VehicleFactory;
+import state.CharacterHealthState;
 import strategy.*;
 import strategy.Character;
 import strategy.Character.*;
@@ -36,13 +37,9 @@ public class ShootEmUpGame {
         print("Civilian1 " + civilian1.getShootBehaviour());
 
         // State
-        HEALTH_STATE state = mainCharacter.getCurrentState();
-        print("Main character current health is " + mainCharacter.getCurrentState());
-
-        print("Main character has been shot...");
         mainCharacter.gotShot("Main character");
-
-        print("Main Character found a first aid kit..");
+        enemy1.foundArmour("Enemy 1");
+        enemy1.foundArmour("Enemy 1");
         mainCharacter.collectedFirstAidKit("Main character");
 
         // Factory Method
