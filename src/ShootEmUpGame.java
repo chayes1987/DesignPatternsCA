@@ -1,12 +1,10 @@
 import decorator.*;
 import factory.EnemyVehicleFactory;
 import factory.MainCharacterVehicleFactory;
-import factory.Vehicle;
 import factory.VehicleFactory;
-import state.CharacterHealthState;
 import strategy.*;
 import strategy.Character;
-import strategy.Character.*;
+import factory.IVehicle;
 
 import javax.swing.*;
 
@@ -45,7 +43,7 @@ public class ShootEmUpGame {
         // Factory Method
         VehicleFactory enemyVehicleFactory = new EnemyVehicleFactory();
         String type = JOptionPane.showInputDialog("Enter Enemy Vehicle type (T for Tank or A for Armoured Car)");
-        Vehicle vehicle = enemyVehicleFactory.createVehicle(type);
+        IVehicle vehicle = enemyVehicleFactory.createVehicle(type);
         print("Enemy " + vehicle.drive());
         print("Enemy " + vehicle.shoot());
 
