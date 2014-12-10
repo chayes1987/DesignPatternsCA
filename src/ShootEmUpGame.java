@@ -1,3 +1,4 @@
+import composite.*;
 import decorator.*;
 import factory.EnemyVehicleFactory;
 import factory.MainCharacterVehicleFactory;
@@ -7,9 +8,72 @@ import strategy.Character;
 import factory.IVehicle;
 
 import javax.swing.*;
+import java.util.Arrays;
 
 public class ShootEmUpGame {
     public static void main(String[] args) {
+        // Composite
+        LevelComponent level1 = new Level("One", "Journey Begins");
+        LevelComponent level2 = new Level("Two", "Evasion Tactics");
+        LevelComponent level3 = new Level("Three", "The Great Escape");
+
+        LevelComponent allLevels = new Level("Listing", "All Game Levels");
+
+        LevelComponent objective1 = new Objective("Find a Gun");
+        LevelComponent objective2 = new Objective("Rescue 5 Hostages");
+        LevelComponent objective3 = new Objective("Evade the Guards");
+        LevelComponent objective4 = new Objective("Kill 10 Enemies");
+
+        LevelComponent mission1 = new Mission(1);
+        mission1.addLevel(objective1);
+        mission1.addLevel(objective2);
+
+        LevelComponent mission2 = new Mission(2);
+        mission2.addLevel(objective3);
+        mission2.addLevel(objective4);
+
+        level1.addLevel(mission1);
+        level1.addLevel(mission2);
+
+        LevelComponent objective5 = new Objective("Get 3 Head-shots");
+        LevelComponent objective6 = new Objective("Help 5 Civilians");
+        LevelComponent objective7 = new Objective("Find a grenade launcher mod");
+        LevelComponent objective8 = new Objective("Blow up 3 Enemies");
+
+        LevelComponent mission3 = new Mission(3);
+        mission3.addLevel(objective5);
+        mission3.addLevel(objective6);
+
+        LevelComponent mission4 = new Mission(4);
+        mission4.addLevel(objective7);
+        mission4.addLevel(objective8);
+
+        level2.addLevel(mission3);
+        level2.addLevel(mission4);
+
+        LevelComponent objective9 = new Objective("Find the Flamethrower Mod");
+        LevelComponent objective10 = new Objective("Incinerate 15 Enemies");
+        LevelComponent objective11 = new Objective("Find the Helicopter");
+        LevelComponent objective12 = new Objective("Use the Helicopter to escape");
+
+        LevelComponent mission5 = new Mission(5);
+        mission5.addLevel(objective9);
+        mission5.addLevel(objective10);
+
+        LevelComponent mission6 = new Mission(6);
+        mission6.addLevel(objective11);
+        mission6.addLevel(objective12);
+
+        level3.addLevel(mission5);
+        level3.addLevel(mission6);
+
+        allLevels.addLevel(level1);
+        allLevels.addLevel(level2);
+        allLevels.addLevel(level3);
+
+        Game shootEmUp = new Game(allLevels);
+        shootEmUp.displayLevelList();
+
         // Strategy
         Character mainCharacter = new MainCharacter();
         print("Main character is " + mainCharacter.walk());
