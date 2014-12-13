@@ -19,6 +19,8 @@ public class LowHealth implements CharacterHealthState{
 
     @Override
     public void collectedFirstAidKit(String character) {
+        System.out.println(character + " found a first aid kit...");
+        currentCharacter.setCurrentState(currentCharacter.getFullHealthState());
         System.out.println(character + " had Low Health and now has Full Health..");
     }
 

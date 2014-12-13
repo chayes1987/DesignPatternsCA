@@ -55,7 +55,6 @@ public class ShootEmUpGame {
         print("Civilian1 " + civilian1.getAttackBehaviour());
         mainCharacter.gotShot("Main character");
         enemy1.foundArmour("Enemy 1");
-        enemy1.foundArmour("Enemy 1");
         mainCharacter.collectedFirstAidKit("Main character");
         Rescue rescue1 = new RescueHostage(hostage1);
         rescue1.rescue();

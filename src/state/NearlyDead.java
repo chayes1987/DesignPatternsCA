@@ -19,6 +19,8 @@ public class NearlyDead implements CharacterHealthState{
 
     @Override
     public void collectedFirstAidKit(String character) {
+        System.out.println(character + " found a first aid kit...");
+        currentCharacter.setCurrentState(currentCharacter.getLowHealthState());
         System.out.println(character + " was Nearly Dead and now has Low Health..");
     }
 
