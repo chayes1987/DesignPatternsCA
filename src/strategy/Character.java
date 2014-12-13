@@ -47,6 +47,10 @@ public abstract class Character {
         this.attackBehaviour = attackBehaviour;
     }
 
+    public CharacterHealthState getCurrentState(){
+        return currentState;
+    }
+
     public void setCurrentState(CharacterHealthState state){
         this.currentState = state;
     }
