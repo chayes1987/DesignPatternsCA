@@ -4,7 +4,7 @@ public class MainCharacter extends Character {
 
     public MainCharacter(){
         super();
-        shootBehaviour = new ShootWithAK47();
+        attackBehaviour = new AttackWithAK47();
         grenadeBehaviour = new CanThrowGrenade();
     }
 }

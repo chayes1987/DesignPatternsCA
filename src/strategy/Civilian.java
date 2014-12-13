@@ -4,7 +4,7 @@ public class Civilian extends Character{
 
     public Civilian(){
         super();
-        shootBehaviour = new CantShoot();
+        attackBehaviour = new CantAttack();
         grenadeBehaviour = new CantThrowGrenade();
     }
 }

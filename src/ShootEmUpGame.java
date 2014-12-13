@@ -8,7 +8,6 @@ import strategy.Character;
 import factory.IVehicle;
 
 import javax.swing.*;
-import java.util.Arrays;
 
 public class ShootEmUpGame {
     public static void main(String[] args) {
@@ -81,22 +80,22 @@ public class ShootEmUpGame {
         Character enemy1 = new Enemy();
         print("Enemy1 is " + enemy1.walk());
 
-        print("Main character is " + mainCharacter.getShootBehaviour());
+        print("Main character is " + mainCharacter.getAttackBehaviour());
         print("Enemy1 is " + enemy1.run());
 
         print("Main character is " + mainCharacter.getGrenadeBehaviour());
 
         Character civilian1 = new Civilian();
         print("Civilian1 is " + civilian1.run());
-        print("Civilian1 " + civilian1.getShootBehaviour());
+        print("Civilian1 " + civilian1.getAttackBehaviour());
 
         Character hostage1 = new Hostage();
         print("Hostage1 is " + hostage1.walk());
         print("Hostage1 " + hostage1.getGrenadeBehaviour());
 
         print("Civilian 1 becomes Vigilante!");
-        civilian1.setShootBehaviour(new ShootWithAK47());
-        print("Civilian1 " + civilian1.getShootBehaviour());
+        civilian1.setAttackBehaviour(new AttackWithAK47());
+        print("Civilian1 " + civilian1.getAttackBehaviour());
 
         // State
         mainCharacter.gotShot("Main character");
@@ -126,6 +125,8 @@ public class ShootEmUpGame {
         print("Main character found a bayonet and a flamethrower and a grenade launcher...");
         gun = new GrenadeLauncher(new Flamethrower(new Bayonet(gun)));
         print("Main character now has a " + gun.getDescription());
+        mainCharacter.setAttackBehaviour(new AttackWithFlamethrower());
+        print("Main character is " + mainCharacter.getAttackBehaviour());
     }
 
     public static void print(String output){

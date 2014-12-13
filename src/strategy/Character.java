@@ -3,7 +3,7 @@ package strategy;
 import state.*;
 
 public abstract class Character {
-    IShootBehaviour shootBehaviour;
+    IAttackBehaviour attackBehaviour;
     IGrenadeBehaviour grenadeBehaviour;
 
     CharacterHealthState hasArmour, fullHealth,
@@ -39,12 +39,12 @@ public abstract class Character {
         this.grenadeBehaviour = grenadeBehaviour;
     }
 
-    public String getShootBehaviour(){
-        return shootBehaviour.shoot();
+    public String getAttackBehaviour(){
+        return attackBehaviour.attack();
     }
 
-    public void setShootBehaviour(IShootBehaviour shootBehaviour){
-        this.shootBehaviour = shootBehaviour;
+    public void setAttackBehaviour(IAttackBehaviour attackBehaviour){
+        this.attackBehaviour = attackBehaviour;
     }
 
     public void setCurrentState(CharacterHealthState state){

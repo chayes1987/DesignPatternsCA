@@ -4,7 +4,7 @@ public class Hostage extends Character {
 
     public Hostage(){
         super();
-        shootBehaviour = new CantShoot();
+        attackBehaviour = new CantAttack();
         grenadeBehaviour = new CantThrowGrenade();
     }
 }

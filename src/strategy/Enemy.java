@@ -4,7 +4,7 @@ public class Enemy extends Character{
 
     public Enemy(){
         super();
-        shootBehaviour = new ShootingWithUzi();
+        attackBehaviour = new AttackWithUzi();
         grenadeBehaviour = new CanThrowGrenade();
     }
 }
