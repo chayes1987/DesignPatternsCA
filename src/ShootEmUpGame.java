@@ -11,6 +11,7 @@ import template.RescueCivilian;
 import template.RescueHostage;
 
 import javax.swing.*;
+import java.util.ArrayList;
 
 public class ShootEmUpGame {
     private Character mainCharacter;
@@ -56,8 +57,10 @@ public class ShootEmUpGame {
         mainCharacter.gotShot("Main character");
         enemy1.foundArmour("Enemy 1");
         mainCharacter.collectedFirstAidKit("Main character");
+        print("Hostage 1 " + hostage1.getAttackBehaviour());
         Rescue rescue1 = new RescueHostage(hostage1);
         rescue1.rescue();
+        print("Hostage 1 " + hostage1.getAttackBehaviour());
         Rescue rescue2 = new RescueCivilian(civilian1);
         civilian1.setCurrentState(civilian1.getNearlyDeadState());
         rescue2.rescue();
@@ -89,11 +92,11 @@ public class ShootEmUpGame {
         LevelComponent objective3 = new Objective("Evade the Guards");
         LevelComponent objective4 = new Objective("Kill 10 Enemies");
 
-        LevelComponent mission1 = new Mission();
+        LevelComponent mission1 = new Mission(new ArrayList<LevelComponent>());
         mission1.addLevel(objective1);
         mission1.addLevel(objective2);
 
-        LevelComponent mission2 = new Mission();
+        LevelComponent mission2 = new Mission(new ArrayList<LevelComponent>());
         mission2.addLevel(objective3);
         mission2.addLevel(objective4);
 
@@ -105,11 +108,11 @@ public class ShootEmUpGame {
         LevelComponent objective7 = new Objective("Find a grenade launcher mod");
         LevelComponent objective8 = new Objective("Blow up 3 Enemies");
 
-        LevelComponent mission3 = new Mission();
+        LevelComponent mission3 = new Mission(new ArrayList<LevelComponent>());
         mission3.addLevel(objective5);
         mission3.addLevel(objective6);
 
-        LevelComponent mission4 = new Mission();
+        LevelComponent mission4 = new Mission(new ArrayList<LevelComponent>());
         mission4.addLevel(objective7);
         mission4.addLevel(objective8);
 
@@ -121,11 +124,11 @@ public class ShootEmUpGame {
         LevelComponent objective11 = new Objective("Find the Helicopter");
         LevelComponent objective12 = new Objective("Use the Helicopter to escape");
 
-        LevelComponent mission5 = new Mission();
+        LevelComponent mission5 = new Mission(new ArrayList<LevelComponent>());
         mission5.addLevel(objective9);
         mission5.addLevel(objective10);
 
-        LevelComponent mission6 = new Mission();
+        LevelComponent mission6 = new Mission(new ArrayList<LevelComponent>());
         mission6.addLevel(objective11);
         mission6.addLevel(objective12);
 

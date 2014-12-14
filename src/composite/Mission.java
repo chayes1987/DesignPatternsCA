@@ -7,8 +7,8 @@ public class Mission extends LevelComponent{
     static int count = 0;
     List<LevelComponent> levelComponents;
 
-    public Mission(){
-        this.levelComponents = new ArrayList<LevelComponent>();
+    public Mission(List<LevelComponent> levelComponents){
+        this.levelComponents = levelComponents;
     }
 
     public void displayLevelInfo(){
