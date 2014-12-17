@@ -67,13 +67,13 @@ public class ShootEmUpGame {
     }
 
     private void useVehicles() {
-        VehicleFactory enemyVehicleFactory = new EnemyVehicleFactory();
+        VehicleFactory enemyVehicleFactory = VehicleFactory.getVehicleFactory("Enemy");
         String type = JOptionPane.showInputDialog("Enter Enemy Vehicle type (T for Tank or A for Armoured Car)");
         IVehicle vehicle = enemyVehicleFactory.createVehicle(type);
         print("Enemy " + vehicle.drive());
         print("Enemy " + vehicle.shoot());
 
-        VehicleFactory mainCharacterVehicleFactory = new MainCharacterVehicleFactory();
+        VehicleFactory mainCharacterVehicleFactory = VehicleFactory.getVehicleFactory("Main Character");
         type = JOptionPane.showInputDialog("Enter Main Character Vehicle type (F for Flamethrower Tank or H for Helicopter)");
         vehicle = mainCharacterVehicleFactory.createVehicle(type);
         print("Main Character " + vehicle.drive());
