@@ -21,7 +21,7 @@ public abstract class Rescue {
         }
     }
 
-    public void untie(){};
+    public void untie(){}
 
     public abstract void checkWounded();
 
@@ -35,5 +35,5 @@ public abstract class Rescue {
         System.out.println("armed with AK47");
     }
 
-    public void escort(){};
+    public void escort(){}
 }
