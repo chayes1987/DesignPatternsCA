@@ -8,8 +8,8 @@ public class Level extends LevelComponent{
     String level;
     String levelDesc;
 
-    public Level(String level, String levelDesc){
-        levelComponents = new ArrayList();
+    public Level(String level, String levelDesc, List<LevelComponent> levelComponents){
+        this.levelComponents = levelComponents;
         this.level = level;
         this.levelDesc = levelDesc;
     }

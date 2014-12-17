@@ -91,11 +91,11 @@ public class ShootEmUpGame {
     }
 
     private void createLevelListing() {
-        LevelComponent level1 = new Level("One", "Journey Begins");
-        LevelComponent level2 = new Level("Two", "Evasion Tactics");
-        LevelComponent level3 = new Level("Three", "The Great Escape");
+        LevelComponent level1 = new Level("One", "Journey Begins", new ArrayList<LevelComponent>());
+        LevelComponent level2 = new Level("Two", "Evasion Tactics", new ArrayList<LevelComponent>());
+        LevelComponent level3 = new Level("Three", "The Great Escape", new ArrayList<LevelComponent>());
 
-        LevelComponent allLevels = new Level("Listing", "All Game Levels");
+        LevelComponent allLevels = new Level("Listing", "All Game Levels", new ArrayList<LevelComponent>());
 
         LevelComponent objective1 = new Objective("Find a Gun");
         LevelComponent objective2 = new Objective("Rescue 5 Hostages");
