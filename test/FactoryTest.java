@@ -3,8 +3,6 @@ import factory.VehicleFactory;
 import org.junit.Assert;
 import org.junit.Test;
 
-import javax.swing.*;
-
 /**
  * Created by Conor on 18/12/2014.
  */
