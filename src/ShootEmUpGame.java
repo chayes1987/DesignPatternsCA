@@ -1,7 +1,5 @@
 import composite.*;
 import decorator.*;
-import factory.EnemyVehicleFactory;
-import factory.MainCharacterVehicleFactory;
 import factory.VehicleFactory;
 import strategy.*;
 import strategy.Character;
@@ -11,6 +9,7 @@ import template.RescueCivilian;
 import template.RescueHostage;
 
 import javax.swing.*;
+import javax.swing.tree.DefaultMutableTreeNode;
 import java.util.ArrayList;
 
 public class ShootEmUpGame {
@@ -91,11 +90,11 @@ public class ShootEmUpGame {
     }
 
     private void createLevelListing() {
+        LevelComponent allLevels = new Level("Listing", "All Game Levels", new ArrayList<LevelComponent>());
+
         LevelComponent level1 = new Level("One", "Journey Begins", new ArrayList<LevelComponent>());
         LevelComponent level2 = new Level("Two", "Evasion Tactics", new ArrayList<LevelComponent>());
         LevelComponent level3 = new Level("Three", "The Great Escape", new ArrayList<LevelComponent>());
-
-        LevelComponent allLevels = new Level("Listing", "All Game Levels", new ArrayList<LevelComponent>());
 
         LevelComponent objective1 = new Objective("Find a Gun");
         LevelComponent objective2 = new Objective("Rescue 5 Hostages");
@@ -149,8 +148,25 @@ public class ShootEmUpGame {
         allLevels.addLevel(level2);
         allLevels.addLevel(level3);
 
+        displayGameStructure(allLevels);
+    }
+
+    private void displayGameStructure(LevelComponent allLevels) {
+        JFrame frame = new JFrame();
+        JTree tree;
+        DefaultMutableTreeNode root = new DefaultMutableTreeNode("Shoot 'Em Up Game");
         Game shootEmUp = new Game(allLevels);
-        shootEmUp.displayLevelList();
+        tree = new JTree(root);
+        shootEmUp.displayLevelList(root);
+        frame.add(tree);
+        for(int node = 0; node < tree.getRowCount(); node++){
+            tree.expandRow(node);
+        }
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.setTitle("Game Structure");
+        frame.setSize(400, 600);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
     }
 
     public static void print(String output){

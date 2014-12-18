@@ -1,5 +1,7 @@
 package composite;
 
+import javax.swing.tree.DefaultMutableTreeNode;
+
 public class Game {
     LevelComponent levels;
 
@@ -7,7 +9,7 @@ public class Game {
         this.levels = levels;
     }
 
-    public void displayLevelList(){
-        levels.displayLevelInfo();
+    public void displayLevelList(DefaultMutableTreeNode root){
+        levels.displayLevelInfo(root);
     }
 }

@@ -1,6 +1,6 @@
 package composite;
 
-import java.util.ArrayList;
+import javax.swing.tree.DefaultMutableTreeNode;
 import java.util.List;
 
 public class Level extends LevelComponent{
@@ -17,12 +17,12 @@ public class Level extends LevelComponent{
     public String getLevel() { return level; }
     public String getLevelDescription() { return levelDesc; }
 
-    public void displayLevelInfo(){
-        System.out.println("Level " + getLevel() +
-            "\nDescription: " + getLevelDescription());
+    public void displayLevelInfo(DefaultMutableTreeNode root){
+        DefaultMutableTreeNode levelsNode = new DefaultMutableTreeNode("Level " + getLevel() + " | " + getLevelDescription());
+        root.add(levelsNode);
 
-        for(LevelComponent level : levelComponents){
-            level.displayLevelInfo();
+        for(LevelComponent level : levelComponents) {
+            level.displayLevelInfo(levelsNode);
         }
     }
 

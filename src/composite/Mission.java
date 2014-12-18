@@ -1,5 +1,6 @@
 package composite;
 
+import javax.swing.tree.DefaultMutableTreeNode;
 import java.util.List;
 
 public class Mission extends LevelComponent{
@@ -10,12 +11,12 @@ public class Mission extends LevelComponent{
         this.levelComponents = levelComponents;
     }
 
-    public void displayLevelInfo(){
-        System.out.println("\tMission " + ++count +
-            "\n\tMission Objectives: ");
+    public void displayLevelInfo(DefaultMutableTreeNode root){
+        DefaultMutableTreeNode missionsNode = new DefaultMutableTreeNode("Mission " + ++count);
+        root.add(missionsNode);
 
         for(LevelComponent objective : levelComponents){
-            objective.displayLevelInfo();
+            objective.displayLevelInfo(missionsNode);
         }
     }
 

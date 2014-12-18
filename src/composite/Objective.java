@@ -1,5 +1,7 @@
 package composite;
 
+import javax.swing.tree.DefaultMutableTreeNode;
+
 public class Objective extends LevelComponent{
     String objective;
     static int count = 0;
@@ -12,7 +14,7 @@ public class Objective extends LevelComponent{
         return objective;
     }
 
-    public void displayLevelInfo(){
-        System.out.println("\t\t" + ++count + " " + getObjective());
+    public void displayLevelInfo(DefaultMutableTreeNode root){
+        root.add(new DefaultMutableTreeNode("Objective " + ++count + " | " + getObjective()));
     }
 }
