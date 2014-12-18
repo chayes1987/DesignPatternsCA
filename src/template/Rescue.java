@@ -10,30 +10,31 @@ public abstract class Rescue {
         this.innocentCharacter = innocentCharacter;
     }
 
-    public void rescue(){
-        untie();
-        checkWounded();
+    public String rescue(){
+        String rescue = "";
+        rescue += untie();
+        rescue += checkWounded() + "\n";
 
         if(innocentCharacter.getCurrentState() != innocentCharacter.getDeadState()) {
-            comfort();
-            arm();
-            escort();
+            rescue += comfort() + "\n";
+            rescue += arm() + "\n";
+            rescue += escort();
         }
+        return rescue;
     }
 
-    public void untie(){}
+    public String untie(){ return ""; }
 
-    public abstract void checkWounded();
+    public abstract String checkWounded();
 
-    public void comfort() {
-        System.out.println("comforting");
+    public String comfort() {
+        return "comforting";
     }
 
-    public void arm() {
-        System.out.println("arming");
+    public String arm() {
         innocentCharacter.setAttackBehaviour(new AttackWithAK47());
-        System.out.println("armed with AK47");
+        return "armed with AK47";
     }
 
-    public void escort(){}
+    public String escort(){ return ""; }
 }

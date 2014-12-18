@@ -9,14 +9,12 @@ public class RescueCivilian extends Rescue{
     }
 
     @Override
-    public void checkWounded() {
-        System.out.println("Checking if civilian is injured...");
+    public String checkWounded() {
         if(innocentCharacter.getCurrentState() == innocentCharacter.getNearlyDeadState()){
-            System.out.println("Civilian is nearly dead...putting them out of their misery");
             innocentCharacter.setCurrentState(innocentCharacter.getDeadState());
-            System.out.println("Civilian is dead...");
+            return "Checking if civilian is injured...\nCivilian is nearly dead...putting them out of their misery\nCivilian is dead...";
         }else{
-            System.out.println("Civilian not injured");
+            return "Checking if civilian is injured...\nCivilian not injured";
         }
     }
 }

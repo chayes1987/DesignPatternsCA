@@ -9,11 +9,16 @@ import template.RescueCivilian;
 import template.RescueHostage;
 
 import javax.swing.*;
+import javax.swing.text.DefaultCaret;
 import javax.swing.tree.DefaultMutableTreeNode;
+import java.awt.*;
 import java.util.ArrayList;
 
 public class ShootEmUpGame {
     private Character mainCharacter;
+    private JFrame frame;
+    private JTextArea game_output;
+    private JSplitPane pane;
 
     public static void main(String[] args) {
         ShootEmUpGame game = new ShootEmUpGame();
@@ -53,12 +58,12 @@ public class ShootEmUpGame {
         print("Civilian 1 becomes Vigilante!");
         civilian1.setAttackBehaviour(new AttackWithAK47());
         print("Civilian1 " + civilian1.getAttackBehaviour());
-        mainCharacter.gotShot("Main character");
-        enemy1.foundArmour("Enemy 1");
-        mainCharacter.collectedFirstAidKit("Main character");
+        print("Main Character" + mainCharacter.gotShot());
+        print("Enemy" + enemy1.foundArmour());
+        print("Main Character" + mainCharacter.collectedFirstAidKit());
         print("Hostage 1 " + hostage1.getAttackBehaviour());
         Rescue rescue1 = new RescueHostage(hostage1);
-        rescue1.rescue();
+        print(rescue1.rescue());
         print("Hostage 1 " + hostage1.getAttackBehaviour());
         Rescue rescue2 = new RescueCivilian(civilian1);
         civilian1.setCurrentState(civilian1.getNearlyDeadState());
@@ -152,24 +157,41 @@ public class ShootEmUpGame {
     }
 
     private void displayGameStructure(LevelComponent allLevels) {
-        JFrame frame = new JFrame();
-        JTree tree;
         DefaultMutableTreeNode root = new DefaultMutableTreeNode("Shoot 'Em Up Game");
+        JTree tree = new JTree(root);
         Game shootEmUp = new Game(allLevels);
-        tree = new JTree(root);
         shootEmUp.displayLevelList(root);
-        frame.add(tree);
         for(int node = 0; node < tree.getRowCount(); node++){
             tree.expandRow(node);
         }
+        pane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT);
+        pane.setLeftComponent(tree);
+
+        displayGame();
+    }
+
+    private void displayGame() {
+        JPanel p = new JPanel();
+        p.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder(Color.black), "Game Output"));
+        p.setLayout(new GridLayout(1, 1));
+        p.setPreferredSize(new Dimension(450, 150));
+        game_output = new JTextArea();
+        DefaultCaret caret = (DefaultCaret)game_output.getCaret();
+        caret.setUpdatePolicy(DefaultCaret.ALWAYS_UPDATE);
+        game_output.setLineWrap(true);
+        game_output.setEditable(false);
+        p.add(new JScrollPane (game_output, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED));
+        pane.setRightComponent(p);
+        frame = new JFrame();
+        frame.add(pane);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.setTitle("Game Structure");
-        frame.setSize(400, 600);
+        frame.setTitle("Shoot 'Em Up Game");
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
 
-    public static void print(String output){
-        System.out.println(output);
+    public void print(String output){
+        game_output.append(output + "\n");
     }
 }

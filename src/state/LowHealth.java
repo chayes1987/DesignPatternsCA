@@ -11,22 +11,20 @@ public class LowHealth implements CharacterHealthState{
     }
 
     @Override
-    public void gotShot(String character) {
-        System.out.println(character + " got shot..");
+    public String gotShot() {
         currentCharacter.setCurrentState(currentCharacter.getNearlyDeadState());
-        System.out.println(character + " had Low Health state now Nearly Dead...");
+        return " got shot...had Low Health state now Nearly Dead...";
     }
 
     @Override
-    public void collectedFirstAidKit(String character) {
-        System.out.println(character + " found a first aid kit...");
+    public String collectedFirstAidKit() {
         currentCharacter.setCurrentState(currentCharacter.getFullHealthState());
-        System.out.println(character + " had Low Health and now has Full Health..");
+        return " found a first aid kit...had Low Health and now has Full Health..";
     }
 
     @Override
-    public void foundArmour(String character) {
+    public String foundArmour() {
         currentCharacter.setCurrentState(currentCharacter.getHasArmourState());
-        System.out.println(character + " armour added..");
+        return " armour added..";
     }
 }

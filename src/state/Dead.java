@@ -11,19 +11,18 @@ public class Dead implements CharacterHealthState {
     }
 
     @Override
-    public void gotShot(String character) {
-        System.out.println(character + " got shot..");
-        System.out.println(character + " already Dead...");
+    public String gotShot() {
+        return " got shot...already Dead...";
     }
 
     @Override
-    public void collectedFirstAidKit(String character) {
-        System.out.println(character + " is still very much dead..");
+    public String collectedFirstAidKit() {
+        return " is still very much dead..";
     }
 
     @Override
-    public void foundArmour(String character) {
+    public String foundArmour() {
         currentCharacter.setCurrentState(currentCharacter.getHasArmourState());
-        System.out.println(character + " don't need it..I am dead...");
+        return " don't need it..I am dead...";
     }
 }

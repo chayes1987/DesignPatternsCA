@@ -11,19 +11,18 @@ public class HasArmour implements CharacterHealthState {
     }
 
     @Override
-    public void gotShot(String character) {
-        System.out.println(character + " got shot..");
+    public String gotShot() {
         currentCharacter.setCurrentState(currentCharacter.getFullHealthState());
-        System.out.println(character + " had Armour state now Full Health...");
+        return  "got shot...had Armour state now Full Health...";
     }
 
     @Override
-    public void collectedFirstAidKit(String character) {
-        System.out.println(character + " has armour and doesn't need first aid right now..");
+    public String collectedFirstAidKit() {
+        return "has armour and doesn't need first aid right now..";
     }
 
     @Override
-    public void foundArmour(String character) {
-        System.out.println(character + " already has armour..");
+    public String foundArmour() {
+        return " already has armour..";
     }
 }

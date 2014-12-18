@@ -9,24 +9,22 @@ public class RescueHostage extends Rescue {
     }
 
     @Override
-    public void untie(){
-        System.out.println("Untying hostage");
+    public String untie(){
+        return "Untying hostage";
     }
 
     @Override
-    public void checkWounded() {
-        System.out.println("Checking if hostage is wounded..");
+    public String checkWounded() {
         if(innocentCharacter.getCurrentState() == innocentCharacter.getNearlyDeadState()){
-            System.out.println("Hostage condition is critical, applying first aid");
             innocentCharacter.setCurrentState(innocentCharacter.getFullHealthState());
-            System.out.println("Hostage health restored");
+            return "Checking if hostage is wounded...\nHostage condition is critical, applying first aid...\nHostage health restored";
         }else{
-            System.out.println("Hostage not injured");
+            return "Checking if hostage is wounded...\nHostage not injured";
         }
     }
 
     @Override
-    public void escort(){
-        System.out.println("Escorting hostage to safety...");
+    public String escort(){
+        return "Escorting hostage to safety...";
     }
 }

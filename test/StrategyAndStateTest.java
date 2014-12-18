@@ -34,16 +34,16 @@ public class StrategyAndStateTest {
     public void testGetCurrentState() throws Exception {
         character = new Civilian();
         Assert.assertEquals(character.getFullHealthState(), character.getCurrentState());
-        character.foundArmour("Civilian");
+        character.foundArmour();
         Assert.assertEquals(character.getHasArmourState(), character.getCurrentState());
-        character.gotShot("Civilian");
+        character.gotShot();
         Assert.assertEquals(character.getFullHealthState(), character.getCurrentState());
         character.setCurrentState(character.getNearlyDeadState());
-        character.collectedFirstAidKit("Civilian");
+        character.collectedFirstAidKit();
         Assert.assertEquals(character.getLowHealthState(), character.getCurrentState());
-        character.gotShot("Civilian");
+        character.gotShot();
         Assert.assertEquals(character.getNearlyDeadState(), character.getCurrentState());
-        character.gotShot("Civilian");
+        character.gotShot();
         Assert.assertEquals(character.getDeadState(), character.getCurrentState());
         Assert.assertNotEquals(character.getFullHealthState(), character.getCurrentState());
     }
@@ -53,9 +53,9 @@ public class StrategyAndStateTest {
         character = new Enemy();
         character.setCurrentState(character.getHasArmourState());
         Assert.assertEquals(character.getHasArmourState(), character.getCurrentState());
-        character.gotShot("Main Character");
+        character.gotShot();
         Assert.assertNotEquals(character.getHasArmourState(), character.getCurrentState());
-        character.foundArmour("Main Character");
+        character.foundArmour();
         Assert.assertEquals(character.getHasArmourState(), character.getCurrentState());
     }
 
@@ -63,9 +63,9 @@ public class StrategyAndStateTest {
     public void testGetFullHealthState() throws Exception {
         character = new MainCharacter();
         Assert.assertEquals(character.getFullHealthState(), character.getCurrentState());
-        character.gotShot("Main Character");
+        character.gotShot();
         Assert.assertNotEquals(character.getFullHealthState(), character.getCurrentState());
-        character.collectedFirstAidKit("Main Character");
+        character.collectedFirstAidKit();
         Assert.assertEquals(character.getFullHealthState(), character.getCurrentState());
     }
 
@@ -73,9 +73,9 @@ public class StrategyAndStateTest {
     public void testGetLowHealthState() throws Exception {
         character = new Civilian();
         Assert.assertNotEquals(character.getLowHealthState(), character.getCurrentState());
-        character.gotShot("Civilian");
+        character.gotShot();
         Assert.assertEquals(character.getLowHealthState(), character.getCurrentState());
-        character.collectedFirstAidKit("Civilian");
+        character.collectedFirstAidKit();
         Assert.assertNotEquals(character.getLowHealthState(), character.getCurrentState());
         character.setCurrentState(character.getLowHealthState());
         Assert.assertEquals(character.getLowHealthState(), character.getCurrentState());
@@ -85,11 +85,11 @@ public class StrategyAndStateTest {
     public void testGetNearlyDeadState() throws Exception {
         character = new Hostage();
         Assert.assertNotEquals(character.getNearlyDeadState(), character.getCurrentState());
-        character.gotShot("Hostage");
+        character.gotShot();
         Assert.assertNotEquals(character.getNearlyDeadState(), character.getCurrentState());
-        character.gotShot("Hostage");
+        character.gotShot();
         Assert.assertEquals(character.getNearlyDeadState(), character.getCurrentState());
-        character.collectedFirstAidKit("Hostage");
+        character.collectedFirstAidKit();
         Assert.assertNotEquals(character.getNearlyDeadState(), character.getCurrentState());
         character.setCurrentState(character.getDeadState());
         Assert.assertNotEquals(character.getLowHealthState(), character.getCurrentState());
@@ -99,11 +99,11 @@ public class StrategyAndStateTest {
     public void testGetDeadState() throws Exception {
         character = new Enemy();
         Assert.assertNotEquals(character.getDeadState(), character.getCurrentState());
-        character.gotShot("Enemy");
+        character.gotShot();
         Assert.assertNotEquals(character.getDeadState(), character.getCurrentState());
-        character.gotShot("Enemy");
+        character.gotShot();
         Assert.assertNotEquals(character.getDeadState(), character.getCurrentState());
-        character.gotShot("Enemy");
+        character.gotShot();
         Assert.assertEquals(character.getDeadState(), character.getCurrentState());
     }
 }

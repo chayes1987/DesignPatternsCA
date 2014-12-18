@@ -55,16 +55,16 @@ public abstract class Character {
         this.currentState = state;
     }
 
-    public void gotShot(String character){
-        currentState.gotShot(character);
+    public String gotShot(){
+        return currentState.gotShot();
     }
 
-    public void collectedFirstAidKit(String character){
-        currentState.collectedFirstAidKit(character);
+    public String collectedFirstAidKit(){
+        return currentState.collectedFirstAidKit();
     }
 
-    public void foundArmour(String character){
-        currentState.foundArmour(character);
+    public String foundArmour(){
+        return currentState.foundArmour();
     }
 
     public CharacterHealthState getHasArmourState() { return hasArmour; }
