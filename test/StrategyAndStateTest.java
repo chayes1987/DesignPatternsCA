@@ -3,7 +3,7 @@ import org.junit.Test;
 import strategy.*;
 import strategy.Character;
 
-public class StrategyTest {
+public class StrategyAndStateTest {
     private Character character;
 
     @Test
