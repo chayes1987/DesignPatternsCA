@@ -1,42 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="af87f292-855a-4810-9584-92195e193112" name="Default" comment="Added a JTree to make the Composite look good">
-      <change type="DELETED" beforePath="C:\Fourth Year\My_Work\Software Design Patterns\CA\out\production\CA\strategy\CantShoot.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Fourth Year\My_Work\Software Design Patterns\CA\out\production\CA\strategy\IShootBehaviour.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Fourth Year\My_Work\Software Design Patterns\CA\out\production\CA\strategy\ShootWithAK47.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Fourth Year\My_Work\Software Design Patterns\CA\out\production\CA\strategy\ShootingWithUzi.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Fourth Year\My_Work\Software Design Patterns\CA\src\strategy\CantShoot.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Fourth Year\My_Work\Software Design Patterns\CA\src\strategy\IShootBehaviour.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Fourth Year\My_Work\Software Design Patterns\CA\src\strategy\ShootWithAK47.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Fourth Year\My_Work\Software Design Patterns\CA\src\strategy\ShootingWithUzi.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CA/strategy/Character.class" afterPath="$PROJECT_DIR$/out/production/CA/strategy/Character.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CA/strategy/Civilian.class" afterPath="$PROJECT_DIR$/out/production/CA/strategy/Civilian.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CA/strategy/Enemy.class" afterPath="$PROJECT_DIR$/out/production/CA/strategy/Enemy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CA/factory/EnemyVehicleFactory.class" afterPath="$PROJECT_DIR$/out/production/CA/factory/EnemyVehicleFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CA/factory/Helicopter.class" afterPath="$PROJECT_DIR$/out/production/CA/factory/Helicopter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CA/strategy/Hostage.class" afterPath="$PROJECT_DIR$/out/production/CA/strategy/Hostage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CA/state/LowHealth.class" afterPath="$PROJECT_DIR$/out/production/CA/state/LowHealth.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CA/strategy/MainCharacter.class" afterPath="$PROJECT_DIR$/out/production/CA/strategy/MainCharacter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CA/factory/MainCharacterVehicleFactory.class" afterPath="$PROJECT_DIR$/out/production/CA/factory/MainCharacterVehicleFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CA/state/NearlyDead.class" afterPath="$PROJECT_DIR$/out/production/CA/state/NearlyDead.class" />
-      <change type="MODIFICATION" beforePath="C:\Fourth Year\My_Work\Software Design Patterns\CA\out\production\CA\ShootEmUpGame.class" afterPath="C:\Fourth Year\My_Work\Software Design Patterns\CA\out\production\CA\ShootEmUpGame.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CA/factory/Vehicle.class" afterPath="$PROJECT_DIR$/out/production/CA/factory/Vehicle.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CA/factory/VehicleFactory.class" afterPath="$PROJECT_DIR$/out/production/CA/factory/VehicleFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CA.iml" afterPath="$PROJECT_DIR$/CA.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/strategy/Character.java" afterPath="$PROJECT_DIR$/src/strategy/Character.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/state/CharacterHealthState.java" afterPath="$PROJECT_DIR$/src/state/CharacterHealthState.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/Conor.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Conor.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/state/Dead.java" afterPath="$PROJECT_DIR$/src/state/Dead.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/state/FullHealth.java" afterPath="$PROJECT_DIR$/src/state/FullHealth.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/state/HasArmour.java" afterPath="$PROJECT_DIR$/src/state/HasArmour.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/state/LowHealth.java" afterPath="$PROJECT_DIR$/src/state/LowHealth.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/state/NearlyDead.java" afterPath="$PROJECT_DIR$/src/state/NearlyDead.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/template/Rescue.java" afterPath="$PROJECT_DIR$/src/template/Rescue.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/template/RescueCivilian.java" afterPath="$PROJECT_DIR$/src/template/RescueCivilian.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/template/RescueHostage.java" afterPath="$PROJECT_DIR$/src/template/RescueHostage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ShootEmUpGame.java" afterPath="$PROJECT_DIR$/src/ShootEmUpGame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/StrategyAndStateTest.java" afterPath="$PROJECT_DIR$/test/StrategyAndStateTest.java" />
+    <list default="true" id="af87f292-855a-4810-9584-92195e193112" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CA/state/CharacterHealthState.class" afterPath="$PROJECT_DIR$/out/production/CA/state/CharacterHealthState.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CA/state/Dead.class" afterPath="$PROJECT_DIR$/out/production/CA/state/Dead.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CA/state/FullHealth.class" afterPath="$PROJECT_DIR$/out/production/CA/state/FullHealth.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CA/state/HasArmour.class" afterPath="$PROJECT_DIR$/out/production/CA/state/HasArmour.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DesignPatternsCA.iws" />
@@ -66,45 +35,73 @@
       <file leaf-file-name="ShootEmUpGame.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ShootEmUpGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.52978724" vertical-offset="2981" max-vertical-offset="3451">
-              <caret line="190" column="31" selection-start-line="190" selection-start-column="31" selection-end-line="190" selection-end-column="31" />
+            <state vertical-scroll-proportion="2.8427947" vertical-offset="1124" max-vertical-offset="3417">
+              <caret line="181" column="39" selection-start-line="181" selection-start-column="39" selection-end-line="181" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#8289#8290#0" expanded="true" />
-                <element signature="e#8338#8339#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RescueHostage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/template/RescueHostage.java">
+      <file leaf-file-name="VehicleFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/factory/VehicleFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
-              <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
-              <folding>
-                <element signature="e#207#208#0" expanded="true" />
-                <element signature="e#247#248#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Rescue.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/template/Rescue.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="11" max-vertical-offset="697">
-              <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+              <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RescueCivilian.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/template/RescueCivilian.java">
+      <file leaf-file-name="Helicopter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/factory/Helicopter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
-              <caret line="16" column="56" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+              <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="28" />
+              <folding>
+                <element signature="e#218#219#0" expanded="true" />
+                <element signature="e#267#268#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IVehicle.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/factory/IVehicle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
+              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainCharacterVehicleFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/factory/MainCharacterVehicleFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tank.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/factory/Tank.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Vehicle.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/factory/Vehicle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+              <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -158,10 +155,9 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1616" />
-    <option name="height" value="876" />
+    <option name="x" value="800" />
+    <option name="width" value="800" />
+    <option name="height" value="860" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -189,7 +185,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -236,13 +231,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="template" />
+              <option name="myItemId" value="factory" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -282,7 +278,7 @@
       <recent name="strategy" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in CA (1)">
+  <component name="RunManager" selected="Application.ShootEmUpGame">
     <configuration default="false" name="All in CA" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CA" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -572,8 +568,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.All in CA (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Application.ShootEmUpGame" />
+        <item index="0" class="java.lang.String" itemvalue="Application.ShootEmUpGame" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.All in CA (1)" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.All in CA" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.TemplateMethodTest" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.AdapterTest.TestAdapter" />
@@ -600,33 +596,33 @@
     </option>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="false" />
+    <frame x="800" y="0" width="800" height="860" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32258064" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33064517" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33064517" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15681234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27567568" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="JavaEE:App" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39919356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39919356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32258064" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33064517" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -671,7 +667,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="John suggests using final integers to solve the health issue" />
     <MESSAGE value="Toms suggestion to use an Enumeration for the Health state" />
     <MESSAGE value="Enum code complete in Main Application" />
     <MESSAGE value="Added gotShot and collectedFirstAidKit to Character, tested in Main Application" />
@@ -696,7 +691,8 @@
     <MESSAGE value="Renamed as it tests the State also" />
     <MESSAGE value="Added class to test Template Method" />
     <MESSAGE value="Added a JTree to make the Composite look good" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a JTree to make the Composite look good" />
+    <MESSAGE value="Added more to GUI&#10;Made changes to methods to return Strings for sake of GUI output&#10;Fixed and re-ran tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added more to GUI&#10;Made changes to methods to return Strings for sake of GUI output&#10;Fixed and re-ran tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -780,9 +776,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.65106386" vertical-offset="0" max-vertical-offset="470">
           <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -804,7 +797,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -812,7 +804,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
           <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -839,10 +830,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
           <caret line="9" column="60" selection-start-line="9" selection-start-column="60" selection-end-line="9" selection-end-column="60" />
-          <folding>
-            <element signature="e#284#285#0" expanded="true" />
-            <element signature="e#341#342#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -901,7 +888,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
           <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -931,7 +917,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -939,7 +924,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -947,58 +931,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.07234043" vertical-offset="0" max-vertical-offset="470">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/factory/Helicopter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3617021" vertical-offset="0" max-vertical-offset="470">
-          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="28" />
-          <folding>
-            <element signature="e#218#219#0" expanded="false" />
-            <element signature="e#267#268#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/factory/IVehicle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07234043" vertical-offset="0" max-vertical-offset="470">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/factory/MainCharacterVehicleFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14468086" vertical-offset="0" max-vertical-offset="470">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/factory/Tank.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07234043" vertical-offset="0" max-vertical-offset="470">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/factory/Vehicle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21702127" vertical-offset="0" max-vertical-offset="470">
-          <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/factory/VehicleFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39787233" vertical-offset="0" max-vertical-offset="470">
-          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1006,7 +938,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.39787233" vertical-offset="0" max-vertical-offset="470">
           <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1014,7 +945,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1022,12 +952,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="544">
           <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding>
-            <element signature="e#274#275#0" expanded="true" />
-            <element signature="e#326#327#0" expanded="true" />
-            <element signature="e#384#385#0" expanded="true" />
-            <element signature="e#435#436#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1035,10 +959,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="25" max-vertical-offset="561">
           <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
-          <folding>
-            <element signature="e#500#501#0" expanded="true" />
-            <element signature="e#580#581#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1046,12 +966,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="53" max-vertical-offset="544">
           <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
-          <folding>
-            <element signature="e#495#496#0" expanded="true" />
-            <element signature="e#569#570#0" expanded="true" />
-            <element signature="e#618#619#0" expanded="true" />
-            <element signature="e#664#665#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1059,7 +973,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="578">
           <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1067,7 +980,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="65" max-vertical-offset="578">
           <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1075,7 +987,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1083,7 +994,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1110,7 +1020,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="856" max-vertical-offset="1887">
           <caret line="105" column="26" selection-start-line="105" selection-start-column="26" selection-end-line="105" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1141,14 +1050,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/factory/Helicopter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="28" />
+          <folding>
+            <element signature="e#218#219#0" expanded="true" />
+            <element signature="e#267#268#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factory/IVehicle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factory/Tank.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factory/Vehicle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+          <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factory/VehicleFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factory/MainCharacterVehicleFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ShootEmUpGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52978724" vertical-offset="2981" max-vertical-offset="3451">
-          <caret line="190" column="31" selection-start-line="190" selection-start-column="31" selection-end-line="190" selection-end-column="31" />
+        <state vertical-scroll-proportion="2.8427947" vertical-offset="1124" max-vertical-offset="3417">
+          <caret line="181" column="39" selection-start-line="181" selection-start-column="39" selection-end-line="181" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#8289#8290#0" expanded="true" />
-            <element signature="e#8338#8339#0" expanded="true" />
           </folding>
         </state>
       </provider>
