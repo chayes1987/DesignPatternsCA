@@ -1,6 +1,9 @@
 import composite.*;
 import decorator.*;
 import factory.VehicleFactory;
+import observer.IObserver;
+import observer.LocationObserver;
+import observer.PlayerLocation;
 import strategy.*;
 import strategy.Character;
 import factory.IVehicle;
@@ -43,7 +46,15 @@ public class ShootEmUpGame {
 
     private void narrateGameplay() {
         mainCharacter = new MainCharacter();
+        PlayerLocation mainCharacterLocation = new PlayerLocation(new ArrayList<IObserver>());
+        LocationObserver mainCharacterLocationObserver = new LocationObserver(mainCharacterLocation);
+        mainCharacterLocation.setLongitude(140.4);
+        mainCharacterLocation.setLatitude(230.5);
+        print(mainCharacterLocationObserver.getLocation());
         print("Main character is " + mainCharacter.walk());
+        mainCharacterLocation.setLongitude(150.4);
+        mainCharacterLocation.setLatitude(224.5);
+        print(mainCharacterLocationObserver.getLocation());
         Character enemy1 = new Enemy();
         print("Enemy1 is " + enemy1.walk());
         print("Main character is " + mainCharacter.getAttackBehaviour());
@@ -55,6 +66,9 @@ public class ShootEmUpGame {
         Character hostage1 = new Hostage();
         print("Hostage1 is " + hostage1.walk());
         print("Hostage1 " + hostage1.getGrenadeBehaviour());
+        mainCharacterLocation.setLongitude(180.8);
+        mainCharacterLocation.setLatitude(150.5);
+        print(mainCharacterLocationObserver.getLocation());
         print("Civilian 1 becomes Vigilante!");
         civilian1.setAttackBehaviour(new AttackWithAK47());
         print("Civilian1 " + civilian1.getAttackBehaviour());
@@ -68,6 +82,9 @@ public class ShootEmUpGame {
         Rescue rescue2 = new RescueCivilian(civilian1);
         civilian1.setCurrentState(civilian1.getNearlyDeadState());
         rescue2.rescue();
+        mainCharacterLocation.setLongitude(390.4);
+        mainCharacterLocation.setLatitude(205.1);
+        print(mainCharacterLocationObserver.getLocation());
     }
 
     private void useVehicles() {
