@@ -1,3 +1,4 @@
+import command.*;
 import composite.*;
 import decorator.*;
 import factory.VehicleFactory;
@@ -29,6 +30,28 @@ public class ShootEmUpGame {
         game.narrateGameplay();
         game.useVehicles();
         game.pimpGun();
+        game.executeCheatCodes();
+    }
+
+    private void executeCheatCodes() {
+        String target = JOptionPane.showInputDialog("Enter the Target of your cheat (E for Enemy, T for Tank or A for Armoured Car)");
+
+        while(!target.equals("T") && !target.equals("A") && !target.equals("E")) {
+            target = JOptionPane.showInputDialog("Invalid...Enter the Target of your cheat (E for Enemy, T for Tank or A for Armoured Car)");
+        }
+        ICheatCodeReceiver receiver = CheatTarget.getTarget(target);
+
+        String action = JOptionPane.showInputDialog("What do you wish to do to them? (W for Strip Weaponry, C for Spontaneously Combust or D for Destroy)");
+
+        while(!action.equals("W") && !action.equals("C") && !action.equals("D")) {
+            action = JOptionPane.showInputDialog("Invalid...What do you wish to do to them? (W for Strip Weaponry, C for Spontaneously Combust or D for Destroy)");
+        }
+
+        print("Gamer has entered a cheat");
+
+        ICommand command = CheatAction.getAction(action, receiver);
+        CheatCodeInvoker invoker = new CheatCodeInvoker(command);
+        print(invoker.performCheat());
     }
 
     private void pimpGun() {
