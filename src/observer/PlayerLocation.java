@@ -36,4 +36,8 @@ public class PlayerLocation implements ISubject{
         this.latitude = latitude;
         notifyObservers();
     }
+
+    public int observerCount(){
+        return observers.size();
+    }
 }
