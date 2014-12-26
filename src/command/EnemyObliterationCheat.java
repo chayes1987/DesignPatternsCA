@@ -17,4 +17,13 @@ public class EnemyObliterationCheat implements ICommand{
         }
         return cheat;
     }
+
+    @Override
+    public String undo() {
+        String undo="";
+        for(ICheatCodeReceiver receiver : receivers){
+            undo += receiver.spawn() + "\n";
+        }
+        return undo;
+    }
 }

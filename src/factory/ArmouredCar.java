@@ -22,4 +22,19 @@ public class ArmouredCar extends Vehicle implements ICheatCodeReceiver {
     public String destroy() {
         return "Armoured car has been destroyed";
     }
+
+    @Override
+    public String addWeaponry() {
+        return "Armoured car has re-added weaponry";
+    }
+
+    @Override
+    public String spawn() {
+        return "Armoured car has re-spawned!";
+    }
+
+    @Override
+    public String reform() {
+        return "Armoured car has re-formed";
+    }
 }

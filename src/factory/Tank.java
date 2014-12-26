@@ -22,4 +22,19 @@ public class Tank extends Vehicle implements ICheatCodeReceiver {
     public String destroy() {
         return "Enemy Tank has been destroyed";
     }
+
+    @Override
+    public String addWeaponry() {
+        return "Tank has re-added weaponry";
+    }
+
+    @Override
+    public String spawn() {
+        return "Tank has re-spawned!";
+    }
+
+    @Override
+    public String reform() {
+        return "Tank has re-formed";
+    }
 }

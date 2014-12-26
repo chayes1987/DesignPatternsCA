@@ -10,4 +10,7 @@ public class CheatCodeInvoker {
     public String performCheat(){
         return command.execute();
     }
+    public String undoCheat(){
+        return command.undo();
+    }
 }

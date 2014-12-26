@@ -11,4 +11,9 @@ public class SpontaneouslyCombust implements ICommand {
     public String execute() {
         return receiver.spontaneouslyCombust();
     }
+
+    @Override
+    public String undo() {
+        return null;
+    }
 }

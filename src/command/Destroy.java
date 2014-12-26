@@ -11,4 +11,9 @@ public class Destroy implements ICommand {
     public String execute() {
         return receiver.destroy();
     }
+
+    @Override
+    public String undo() {
+        return null;
+    }
 }

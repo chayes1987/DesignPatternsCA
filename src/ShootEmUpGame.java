@@ -73,6 +73,7 @@ public class ShootEmUpGame {
             EnemyObliterationCheat cheat = new EnemyObliterationCheat(receiverList);
             invoker = new CheatCodeInvoker(cheat);
             print(invoker.performCheat());
+            print(invoker.undoCheat());
         }
     }
 

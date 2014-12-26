@@ -1,19 +1,19 @@
 package command;
 
-public class StripWeaponry implements ICommand {
+public class AddWeaponry implements ICommand {
     ICheatCodeReceiver receiver;
 
-    public StripWeaponry(ICheatCodeReceiver receiver){
+    public AddWeaponry(ICheatCodeReceiver receiver){
         this.receiver = receiver;
     }
 
     @Override
     public String execute() {
-        return receiver.stripWeaponry();
+        return receiver.addWeaponry();
     }
 
     @Override
     public String undo() {
-        return null;
+        return receiver.stripWeaponry();
     }
 }

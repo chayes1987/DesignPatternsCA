@@ -24,4 +24,19 @@ public class Enemy extends Character implements ICheatCodeReceiver {
     public String destroy() {
         return "Enemy has been destroyed";
     }
+
+    @Override
+    public String addWeaponry() {
+        return "Enemy is re-armed with weaponry";
+    }
+
+    @Override
+    public String spawn() {
+        return "Enemy has re-spawned!";
+    }
+
+    @Override
+    public String reform() {
+        return "Enemy has re-formed";
+    }
 }
