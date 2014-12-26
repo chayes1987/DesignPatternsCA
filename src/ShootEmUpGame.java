@@ -1,6 +1,8 @@
 import command.*;
 import composite.*;
 import decorator.*;
+import factory.ArmouredCar;
+import factory.Tank;
 import factory.VehicleFactory;
 import observer.IObserver;
 import observer.LocationObserver;
@@ -15,8 +17,11 @@ import template.RescueHostage;
 import javax.swing.*;
 import javax.swing.text.DefaultCaret;
 import javax.swing.tree.DefaultMutableTreeNode;
-import java.awt.*;
+import java.awt.GridLayout;
+import java.awt.Dimension;
+import java.awt.Color;
 import java.util.ArrayList;
+import java.util.List;
 
 public class ShootEmUpGame {
     private Character mainCharacter;
@@ -52,6 +57,23 @@ public class ShootEmUpGame {
         ICommand command = CheatAction.getAction(action, receiver);
         CheatCodeInvoker invoker = new CheatCodeInvoker(command);
         print(invoker.performCheat());
+
+        String obliterate = JOptionPane.showInputDialog("Obliterate all enemies? (Yes or No)");
+
+        while(!obliterate.equals("Yes") && !obliterate.equals("No")) {
+            obliterate = JOptionPane.showInputDialog("Invalid...Obliterate all enemies? (Yes or No)");
+        }
+
+        if(obliterate.equals("Yes")){
+            List<ICheatCodeReceiver> receiverList = new ArrayList<ICheatCodeReceiver>();
+            receiverList.add(new Enemy());
+            receiverList.add(new ArmouredCar());
+            receiverList.add(new Tank());
+
+            EnemyObliterationCheat cheat = new EnemyObliterationCheat(receiverList);
+            invoker = new CheatCodeInvoker(cheat);
+            print(invoker.performCheat());
+        }
     }
 
     private void pimpGun() {
