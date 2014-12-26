@@ -14,6 +14,6 @@ public class Destroy implements ICommand {
 
     @Override
     public String undo() {
-        return null;
+        return receiver.reform();
     }
 }
