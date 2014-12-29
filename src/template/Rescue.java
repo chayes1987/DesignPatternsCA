@@ -10,7 +10,7 @@ public abstract class Rescue {
         this.innocentCharacter = innocentCharacter;
     }
 
-    public String rescue(){
+    public final String rescue(){
         String rescue = "";
         rescue += untie();
         rescue += checkWounded() + "\n";
