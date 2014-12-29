@@ -8,5 +8,7 @@ Patterns implemented were:
 - Adapter
 - Composite
 - State
+- Observer
+- Command
 
 All commits with comments can be viewed on the commits page
