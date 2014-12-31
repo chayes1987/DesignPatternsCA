@@ -22,21 +22,21 @@ public abstract class Character {
     }
 
     public String walk(){
-        return "walking...";
+        return this.getName() + " is walking...";
     }
 
     public String run(){
-        return "running...";
+        return this.getName() + " is running...";
     }
 
     public String jump(){
-        return "jumping...";
+        return this.getName() + " is jumping...";
     }
 
     public String getName() { return this.name; }
 
     public String getGrenadeBehaviour(){
-        return grenadeBehaviour.throwGrenade();
+        return this.getName() + grenadeBehaviour.throwGrenade();
     }
 
     public void setGrenadeBehaviour(IGrenadeBehaviour grenadeBehaviour){
@@ -44,7 +44,7 @@ public abstract class Character {
     }
 
     public String getAttackBehaviour(){
-        return attackBehaviour.attack();
+        return this.getName() + attackBehaviour.attack();
     }
 
     public void setAttackBehaviour(IAttackBehaviour attackBehaviour){
@@ -60,15 +60,15 @@ public abstract class Character {
     }
 
     public String gotShot(){
-        return currentState.gotShot();
+        return this.getName() + currentState.gotShot();
     }
 
     public String collectedFirstAidKit(){
-        return currentState.collectedFirstAidKit();
+        return this.getName() + currentState.collectedFirstAidKit();
     }
 
     public String foundArmour(){
-        return currentState.foundArmour();
+        return this.getName() + currentState.foundArmour();
     }
 
     public CharacterHealthState getHasArmourState() { return hasArmour; }

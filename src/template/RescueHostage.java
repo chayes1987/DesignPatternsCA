@@ -10,7 +10,7 @@ public class RescueHostage extends Rescue {
 
     @Override
     public String untie(){
-        return "Untying hostage";
+        return "Untying hostage\n";
     }
 
     @Override

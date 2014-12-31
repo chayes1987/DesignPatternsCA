@@ -31,7 +31,7 @@ public class CommandTest {
         Assert.assertEquals("Armoured car has re-added weaponry", invoker.undoCheat());
 
         List<ICheatCodeReceiver> receiverList = new ArrayList<ICheatCodeReceiver>();
-        receiverList.add(new Enemy());
+        receiverList.add(new Enemy("Enemy 1"));
         receiverList.add(new ArmouredCar());
         receiverList.add(new Tank());
 

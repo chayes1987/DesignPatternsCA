@@ -4,6 +4,6 @@ public class CanThrowGrenade implements IGrenadeBehaviour {
 
     @Override
     public String throwGrenade() {
-        return "throwing grenade...";
+        return " is throwing grenade...";
     }
 }

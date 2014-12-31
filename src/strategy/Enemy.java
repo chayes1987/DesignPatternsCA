@@ -12,7 +12,7 @@ public class Enemy extends Character implements ICheatCodeReceiver {
 
     @Override
     public String stripWeaponry() {
-        return "Enemy has been striped off Weaponry";
+        return "Enemy has been striped of Weaponry";
     }
 
     @Override

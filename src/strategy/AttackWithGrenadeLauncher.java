@@ -3,6 +3,6 @@ package strategy;
 public class AttackWithGrenadeLauncher implements IAttackBehaviour {
     @Override
     public String attack() {
-        return "firing from Grenade Launcher...";
+        return " is firing from Grenade Launcher...";
     }
 }

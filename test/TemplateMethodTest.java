@@ -11,9 +11,9 @@ import template.RescueCivilian;
 public class TemplateMethodTest {
     @Test
     public void TestTemplateMethod(){
-        Rescue rescueCivilian = new RescueCivilian(new Civilian());
+        Rescue rescueCivilian = new RescueCivilian(new Civilian("Civilian1"));
         Assert.assertNotEquals(null, rescueCivilian);
-        Rescue rescueHostage = new RescueCivilian(new Hostage());
+        Rescue rescueHostage = new RescueCivilian(new Hostage("Hostage1"));
         Assert.assertNotEquals(null, rescueHostage);
     }
 }
