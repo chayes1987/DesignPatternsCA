@@ -15,7 +15,7 @@ public class EnemyObliterationCheat implements ICommand{
         for(ICheatCodeReceiver receiver : receivers){
             cheat += receiver.spontaneouslyCombust() + "\n";
         }
-        return cheat;
+        return cheat.trim();
     }
 
     @Override
@@ -24,6 +24,6 @@ public class EnemyObliterationCheat implements ICommand{
         for(ICheatCodeReceiver receiver : receivers){
             undo += receiver.spawn() + "\n";
         }
-        return undo;
+        return undo.trim();
     }
 }

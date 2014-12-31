@@ -4,7 +4,6 @@ import decorator.*;
 import factory.ArmouredCar;
 import factory.Tank;
 import factory.VehicleFactory;
-import observer.IObserver;
 import observer.LocationObserver;
 import observer.PlayerLocation;
 import strategy.*;
@@ -42,7 +41,7 @@ public class ShootEmUpGame {
     }
 
     private void rollCredits() {
-        print("\nThanks for playing, characters in alphabetical order were:");
+        print("\n*****Thanks for playing*****\n The characters in alphabetical order were:");
         Collections.sort(characters,
                 (character1, character2) -> character1.getName().compareTo(character2.getName())
         );
@@ -177,22 +176,22 @@ public class ShootEmUpGame {
     }
 
     private void createLevelListing() {
-        LevelComponent allLevels = new Level("Listing", "All Game Levels", new ArrayList<LevelComponent>());
+        LevelComponent allLevels = new Level("Listing", "All Game Levels", new ArrayList<>());
 
-        LevelComponent level1 = new Level("One", "Journey Begins", new ArrayList<LevelComponent>());
-        LevelComponent level2 = new Level("Two", "Evasion Tactics", new ArrayList<LevelComponent>());
-        LevelComponent level3 = new Level("Three", "The Great Escape", new ArrayList<LevelComponent>());
+        LevelComponent level1 = new Level("One", "Journey Begins", new ArrayList<>());
+        LevelComponent level2 = new Level("Two", "Evasion Tactics", new ArrayList<>());
+        LevelComponent level3 = new Level("Three", "The Great Escape", new ArrayList<>());
 
         LevelComponent objective1 = new Objective("Find a Gun");
         LevelComponent objective2 = new Objective("Rescue 5 Hostages");
         LevelComponent objective3 = new Objective("Evade the Guards");
         LevelComponent objective4 = new Objective("Kill 10 Enemies");
 
-        LevelComponent mission1 = new Mission(new ArrayList<LevelComponent>());
+        LevelComponent mission1 = new Mission(new ArrayList<>());
         mission1.addLevel(objective1);
         mission1.addLevel(objective2);
 
-        LevelComponent mission2 = new Mission(new ArrayList<LevelComponent>());
+        LevelComponent mission2 = new Mission(new ArrayList<>());
         mission2.addLevel(objective3);
         mission2.addLevel(objective4);
 
@@ -204,11 +203,11 @@ public class ShootEmUpGame {
         LevelComponent objective7 = new Objective("Find a grenade launcher mod");
         LevelComponent objective8 = new Objective("Blow up 3 Enemies");
 
-        LevelComponent mission3 = new Mission(new ArrayList<LevelComponent>());
+        LevelComponent mission3 = new Mission(new ArrayList<>());
         mission3.addLevel(objective5);
         mission3.addLevel(objective6);
 
-        LevelComponent mission4 = new Mission(new ArrayList<LevelComponent>());
+        LevelComponent mission4 = new Mission(new ArrayList<>());
         mission4.addLevel(objective7);
         mission4.addLevel(objective8);
 
@@ -220,11 +219,11 @@ public class ShootEmUpGame {
         LevelComponent objective11 = new Objective("Find the Helicopter");
         LevelComponent objective12 = new Objective("Use the Helicopter to escape");
 
-        LevelComponent mission5 = new Mission(new ArrayList<LevelComponent>());
+        LevelComponent mission5 = new Mission(new ArrayList<>());
         mission5.addLevel(objective9);
         mission5.addLevel(objective10);
 
-        LevelComponent mission6 = new Mission(new ArrayList<LevelComponent>());
+        LevelComponent mission6 = new Mission(new ArrayList<>());
         mission6.addLevel(objective11);
         mission6.addLevel(objective12);
 
