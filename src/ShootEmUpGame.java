@@ -21,6 +21,7 @@ import java.awt.GridLayout;
 import java.awt.Dimension;
 import java.awt.Color;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class ShootEmUpGame {
@@ -28,6 +29,7 @@ public class ShootEmUpGame {
     private JFrame frame;
     private JTextArea game_output;
     private JSplitPane pane;
+    private List<Character> characters;
 
     public static void main(String[] args) {
         ShootEmUpGame game = new ShootEmUpGame();
@@ -36,6 +38,18 @@ public class ShootEmUpGame {
         game.useVehicles();
         game.pimpGun();
         game.executeCheatCodes();
+        game.rollCredits();
+    }
+
+    private void rollCredits() {
+        print("\nThanks for playing, characters in alphabetical order were:");
+        Collections.sort(characters,
+                (character1, character2) -> character1.getName().compareTo(character2.getName())
+        );
+
+        for(Character character : characters){
+            print(character.getName());
+        }
     }
 
     private void executeCheatCodes() {
@@ -65,8 +79,8 @@ public class ShootEmUpGame {
         }
 
         if(obliterate.equals("Yes")){
-            List<ICheatCodeReceiver> receiverList = new ArrayList<ICheatCodeReceiver>();
-            receiverList.add(new Enemy());
+            List<ICheatCodeReceiver> receiverList = new ArrayList<>();
+            receiverList.add(new Enemy("Enemy 2"));
             receiverList.add(new ArmouredCar());
             receiverList.add(new Tank());
 
@@ -91,8 +105,10 @@ public class ShootEmUpGame {
     }
 
     private void narrateGameplay() {
-        mainCharacter = new MainCharacter();
-        PlayerLocation mainCharacterLocation = new PlayerLocation(new ArrayList<IObserver>());
+        characters = new ArrayList<>();
+        mainCharacter = new MainCharacter("Main Character");
+        characters.add(mainCharacter);
+        PlayerLocation mainCharacterLocation = new PlayerLocation(new ArrayList<>());
         LocationObserver mainCharacterLocationObserver = new LocationObserver(mainCharacterLocation);
         mainCharacterLocation.setLongitude(140.4);
         mainCharacterLocation.setLatitude(230.5);
@@ -101,15 +117,18 @@ public class ShootEmUpGame {
         mainCharacterLocation.setLongitude(150.4);
         mainCharacterLocation.setLatitude(224.5);
         print(mainCharacterLocationObserver.getLocation());
-        Character enemy1 = new Enemy();
+        Character enemy1 = new Enemy("Enemy 1");
+        characters.add(enemy1);
         print("Enemy1 is " + enemy1.walk());
         print("Main character is " + mainCharacter.getAttackBehaviour());
         print("Enemy1 is " + enemy1.run());
         print("Main character is " + mainCharacter.getGrenadeBehaviour());
-        Character civilian1 = new Civilian();
+        Character civilian1 = new Civilian("Civilian 1");
+        characters.add(civilian1);
         print("Civilian1 is " + civilian1.run());
         print("Civilian1 " + civilian1.getAttackBehaviour());
-        Character hostage1 = new Hostage();
+        Character hostage1 = new Hostage("Hostage 1");
+        characters.add(hostage1);
         print("Hostage1 is " + hostage1.walk());
         print("Hostage1 " + hostage1.getGrenadeBehaviour());
         mainCharacterLocation.setLongitude(180.8);

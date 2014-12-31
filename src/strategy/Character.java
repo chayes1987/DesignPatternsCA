@@ -3,13 +3,15 @@ package strategy;
 import state.*;
 
 public abstract class Character {
+    String name;
     IAttackBehaviour attackBehaviour;
     IGrenadeBehaviour grenadeBehaviour;
 
     CharacterHealthState hasArmour, fullHealth,
             lowHealth, nearlyDead, dead, currentState;
 
-    public Character(){
+    public Character(String name){
+        this.name = name;
         hasArmour = new HasArmour(this);
         fullHealth = new FullHealth(this);
         lowHealth = new LowHealth(this);
@@ -30,6 +32,8 @@ public abstract class Character {
     public String jump(){
         return "jumping...";
     }
+
+    public String getName() { return this.name; }
 
     public String getGrenadeBehaviour(){
         return grenadeBehaviour.throwGrenade();

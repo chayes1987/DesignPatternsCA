@@ -4,8 +4,8 @@ import command.ICheatCodeReceiver;
 
 public class Enemy extends Character implements ICheatCodeReceiver {
 
-    public Enemy(){
-        super();
+    public Enemy(String name){
+        super(name);
         attackBehaviour = new AttackWithUzi();
         grenadeBehaviour = new CanThrowGrenade();
     }
