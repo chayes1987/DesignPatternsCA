@@ -37,7 +37,7 @@ public class CommandTest {
 
         EnemyObliterationCheat cheat = new EnemyObliterationCheat(receiverList);
         invoker = new CheatCodeInvoker(cheat);
-        Assert.assertEquals("Enemy has spontaneously combusted\nArmoured car spontaneously combusted\nEnemy Tank spontaneously combusted\n", invoker.performCheat());
-        Assert.assertEquals("Enemy has re-spawned!\nArmoured car has re-spawned!\nTank has re-spawned!\n", invoker.undoCheat());
+        Assert.assertEquals("Enemy has spontaneously combusted\nArmoured car spontaneously combusted\nEnemy Tank spontaneously combusted", invoker.performCheat());
+        Assert.assertEquals("Enemy has re-spawned!\nArmoured car has re-spawned!\nTank has re-spawned!", invoker.undoCheat());
     }
 }
