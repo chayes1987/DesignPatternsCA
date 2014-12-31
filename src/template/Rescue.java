@@ -28,12 +28,12 @@ public abstract class Rescue {
     public abstract String checkWounded();
 
     public String comfort() {
-        return "comforting";
+        return "...comforting them";
     }
 
     public String arm() {
         innocentCharacter.setAttackBehaviour(new AttackWithAK47());
-        return "armed with AK47";
+        return "...arming them with AK47";
     }
 
     public String escort(){ return ""; }
