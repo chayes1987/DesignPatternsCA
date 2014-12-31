@@ -1,5 +1,4 @@
-Contains all code for Design Patterns CA
-Patterns implemented were:
+Contains all code for Design Patterns CA, patterns implemented were:
 
 - Strategy
 - Decorator
