@@ -252,17 +252,17 @@ public class ShootEmUpGame {
     }
 
     private void displayGame() {
-        JPanel p = new JPanel();
-        p.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder(Color.black), "Game Output"));
-        p.setLayout(new GridLayout(1, 1));
-        p.setPreferredSize(new Dimension(450, 150));
+        JPanel outputPanel = new JPanel();
+        outputPanel.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder(Color.black), "Game Output"));
+        outputPanel.setLayout(new GridLayout(1, 1));
+        outputPanel.setPreferredSize(new Dimension(450, 150));
         game_output = new JTextArea();
         DefaultCaret caret = (DefaultCaret)game_output.getCaret();
         caret.setUpdatePolicy(DefaultCaret.ALWAYS_UPDATE);
         game_output.setLineWrap(true);
         game_output.setEditable(false);
-        p.add(new JScrollPane (game_output, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED));
-        pane.setRightComponent(p);
+        outputPanel.add(new JScrollPane(game_output, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED));
+        pane.setRightComponent(outputPanel);
         frame = new JFrame();
         frame.add(pane);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
