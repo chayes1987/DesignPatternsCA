@@ -91,13 +91,13 @@ public class ShootEmUpGame {
     }
 
     private void pimpGun() {
-        Gun gun = new SimpleGun();
+        Gun gun = WeaponFactory.createWeapon(WEAPON_TYPE.SIMPLE_GUN);
         print("Main character found a " + gun.getDescription());
         print("Main character found a scope...");
-        gun = new Scope(gun);
+        gun = WeaponFactory.createWeapon(WEAPON_TYPE.SNIPER);
         print("Main character now has a " + gun.getDescription());
         print("Main character found a bayonet and a flamethrower and a grenade launcher...");
-        gun = new GrenadeLauncher(new Flamethrower(new Bayonet(gun)));
+        gun = WeaponFactory.createWeapon(WEAPON_TYPE.PIMPED_GUN);
         print("Main character now has a " + gun.getDescription());
         mainCharacter.setAttackBehaviour(new AttackWithFlamethrower());
         print("Main character is " + mainCharacter.getAttackBehaviour());
