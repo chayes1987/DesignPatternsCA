@@ -1,6 +1,6 @@
 package decorator;
 
-public class WeaponFactory {
+public class GunFactory {
     public static Gun createWeapon(WEAPON_TYPE type) {
         if(type == WEAPON_TYPE.SIMPLE_GUN){
             return new SimpleGun();
