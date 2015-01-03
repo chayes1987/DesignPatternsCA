@@ -22,7 +22,6 @@ public class Dead implements CharacterHealthState {
 
     @Override
     public String foundArmour() {
-        currentCharacter.setCurrentState(currentCharacter.getHasArmourState());
         return " don't need it..I am dead...";
     }
 }

@@ -13,13 +13,13 @@ public class NearlyDead implements CharacterHealthState{
     @Override
     public String gotShot() {
         currentCharacter.setCurrentState(currentCharacter.getDeadState());
-        return "got shot...was Nearly Dead state now Dead...";
+        return " got shot...was Nearly Dead state now Dead...";
     }
 
     @Override
     public String collectedFirstAidKit() {
         currentCharacter.setCurrentState(currentCharacter.getLowHealthState());
-        return "found a first aid kit...was Nearly Dead and now has Low Health..";
+        return " found a first aid kit...was Nearly Dead and now has Low Health..";
     }
 
     @Override
